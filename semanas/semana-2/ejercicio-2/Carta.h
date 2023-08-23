@@ -15,5 +15,6 @@ public:
 	void eliminarPlato(int pos);
 	Plato* getPlato(int pos);
 	int getN();
+	string toString();
 };
 

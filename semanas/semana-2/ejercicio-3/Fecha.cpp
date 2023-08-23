@@ -10,7 +10,14 @@ Fecha::Fecha()
 Fecha::Fecha(int dia, string mes, int ano)
 {
 	this->dia = dia;
-	this->mes = mes;
+	bool todosNumeros = true;
+	for (int i = 0; i < mes.length(); i++) {
+		if (!isalnum(mes[i])) {
+			todosNumeros = false;
+			break;
+		}
+	}
+	this->mes = todosNumeros ? Fecha::mesToString(stoi(mes)) : mes;
 	this->ano = ano;
 }
 
@@ -58,7 +65,7 @@ void Fecha::setMes(int mes)
 string Fecha::mesToString(int mes) {
 	string meses[12] = { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
 		"Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" };
-	return meses[mes];
+	return meses[mes - 1];
 }
 
 void Fecha::setAno(int ano)
