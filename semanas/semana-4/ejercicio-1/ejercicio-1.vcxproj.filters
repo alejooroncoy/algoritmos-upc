@@ -15,18 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Proveedor.h">
+    <ClInclude Include="encabezados.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cuadrado.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Producto.h">
+    <ClInclude Include="Cuadrados.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Proveedor.cpp">
+    <ClCompile Include="Cuadrado.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Producto.cpp">
+    <ClCompile Include="Cuadrados.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ejercicio-1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{B9993731-7319-43C6-ADCB-6F7B0BFD5E45}</ProjectGuid>
+    <ProjectGuid>{FA5FBCF2-0D2B-422E-BDFD-0FED9CA09984}</ProjectGuid>
     <Keyword>ManagedCProj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -100,12 +100,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Producto.h" />
-    <ClInclude Include="Proveedor.h" />
+    <ClInclude Include="Auto.h" />
+    <ClInclude Include="Chasis.h" />
+    <ClInclude Include="Competencia.h" />
+    <ClInclude Include="Llanta.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Producto.cpp" />
-    <ClCompile Include="Proveedor.cpp" />
+    <ClCompile Include="Auto.cpp" />
+    <ClCompile Include="Chasis.cpp" />
+    <ClCompile Include="Competencia.cpp" />
+    <ClCompile Include="ejercicio-2.cpp" />
+    <ClCompile Include="encabezados.h" />
+    <ClCompile Include="Llanta.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

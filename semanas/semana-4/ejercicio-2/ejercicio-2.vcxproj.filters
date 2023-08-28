@@ -15,18 +15,36 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Proveedor.h">
+    <ClInclude Include="Llanta.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Producto.h">
+    <ClInclude Include="Chasis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Auto.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Competencia.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Proveedor.cpp">
+    <ClCompile Include="Llanta.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Producto.cpp">
+    <ClCompile Include="encabezados.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chasis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Auto.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Competencia.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ejercicio-2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
