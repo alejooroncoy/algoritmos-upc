@@ -7,7 +7,7 @@ Contactos::Contactos()
 
 Contactos::~Contactos()
 {
-	delete[] this->contactos;
+	delete this->contactos;
 	this->contactos = nullptr;
 	delete this->n;
 	this->n = nullptr;
@@ -21,9 +21,10 @@ void Contactos::agregarContacto(Contacto* contacto)
 	}
 	Contacto** contactosTemporal = new Contacto * [*this->n + 1];
 
-	for (int i = 0; i < *this->n; i++) {
+	for (int i = 0; i < *this->n; i++) 
 		contactosTemporal[i] = this->contactos[i];
-	}
+	if (this->contactos != nullptr) delete this->contactos;
+
 	contactosTemporal[*this->n] = contacto;
 	*this->n += 1;
 	this->contactos = contactosTemporal;
@@ -60,6 +61,7 @@ void Contactos::eliminarContacto(int pos)
 				contactosTemporal[i] = this->contactos[i];
 			}
 		}
+		if (this->contactos != nullptr) delete this->contactos;
 		this->contactos = contactosTemporal;
 		*this->n -= 1;
 	}

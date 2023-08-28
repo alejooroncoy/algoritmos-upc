@@ -65,59 +65,70 @@ void modificarContacto(Contactos* contactos) {
 		Contacto* contacto = contactos->getContacto(pos);
 
 		if (contacto != nullptr) {
-			cout << char(168) << "Deseas cambiar el nombre?";
+			cout << "Nombre" << "(Actual: " << contacto->getNombre() << ")" << ": "; 
+			cin.ignore(); getline(cin, nombre);
+			cout << "Tel" << char(130) << "fono" << "(Actual: " << contacto->getTelefono() << ")" << ": ";
+			cin.ignore(); cin >> telefono;
+
+			cout << char(168) << "Deseas cambiar el sexo? (S: si, N: no): ";
 			cin >> decision;
-			if (decision == 'S') cout << "Nombre" << "(Actual: " << contacto->getNombre() << ")" << ": "; cin >> nombre;
-
-			cout << char(168) << "Deseas cambiar el telefono?";
-			cin >> decision;
-			if (decision == 'S') cout << "Tel" << char(130) << "fono" << "(Actual: " << contacto->getTelefono() << ")" << ": "; cin >> telefono;
-
-			cout << char(168) << "Deseas cambiar el sexo?";
-			cin >> decision;
-			if (decision == 'S') cout << "Sexo" << "(Actual: " << contacto->getSexo() << ")" << ": "; cin >> sexo;
-
-			cout << char(168) << "Deseas cambiar la facultad?";
-			cin >> decision;
-
-			if (decision == 'S') cout << "Facultad" << "(Actual: " << contacto->getFacultad() << ")" << ": "; cin >> facultad;
-
-			cout << char(168) << "Deseas cambiar el email?";
+			if (decision == 'S') {
+				cout << "Sexo" << "(Actual: " << contacto->getSexo() << ")" << ": "; cin >> sexo;
+			}
+			 
+			cout << char(168) << "Deseas cambiar la facultad? (S: si, N: no): ";
 			cin >> decision;
 
-			if (decision == 'S') cout << "Email:" << "(Actual: " << contacto->getEmail() << ")" << ": "; cin >> email;
+			if (decision == 'S') {
+				cout << "Facultad" << "(Actual: " << contacto->getFacultad() << ")" << ": "; cin >> facultad;
+			}
 
-			cout << char(168) << "Deseas cambiar la red social?";
+			cout << char(168) << "Deseas cambiar el email? (S: si, N: no): ";
 			cin >> decision;
 
-			if (decision == 'S') cout << "Red Social:" << "(Actual: " << contacto->getRedSocial() << ")" << ": "; cin >> redSocial;
+			if (decision == 'S') {
+				cout << "Email:" << "(Actual: " << contacto->getEmail() << ")" << ": "; cin >> email;
+			}
 
-			cout << char(168) << "Deseas cambiar la fecha de nacimento?";
+			cout << char(168) << "Deseas cambiar la red social? (S: si, N: no): ";
+			cin >> decision;
+
+			if (decision == 'S') {
+				cout << "Red Social:" << "(Actual: " << contacto->getRedSocial() << ")" << ": "; cin >> redSocial;
+			}
+
+			cout << char(168) << "Deseas cambiar la fecha de nacimento? (S: si, N: no): ";
 			cin >> decision;
 
 			if (decision == 'S') {
 				cout << "Fecha de nacimiento: " << endl;
 
-				cout << char(168) << "Deseas cambiar el d" << char(161) << "a?";
+				cout << char(168) << "Deseas cambiar el d" << char(161) << "a? (S: si, N: no):";
 				cin >> decision;
 
-				if (decision == 'S') cout << "  D" << char(161) << "a:" << "(Actual: " << contacto->getFecha()->getDia() << ")" << ": "; cin >> dia;
+				if (decision == 'S') {
+					cout << "  D" << char(161) << "a:" << "(Actual: " << contacto->getFecha()->getDia() << ")" << ": "; cin >> dia;
+				}
 
-				cout << char(168) << "Deseas cambiar el mes?";
+				cout << char(168) << "Deseas cambiar el mes? (S: si, N: no):";
 				cin >> decision;
 
-				if (decision == 'S') cout << "  Mes:" << "(Actual: " << contacto->getFecha()->getMes() << ")" << ": ";  cin >> mes;
-				cout << char(168) << "Deseas cambiar el a" << char(164) << "o?";
+				if (decision == 'S') {
+					cout << "  Mes:" << "(Actual: " << contacto->getFecha()->getMes() << ")" << ": ";  cin >> mes;
+				}
+				cout << char(168) << "Deseas cambiar el a" << char(164) << "o? (S: si, N: no):";
 				cin >> decision;
 
-				if (decision == 'S') cout << "  A" << char(164) << "o:" << "(Actual: " << contacto->getFecha()->getAno() << ")" << ": "; cin >> ano;
+				if (decision == 'S') {
+					cout << "  A" << char(164) << "o:" << "(Actual: " << contacto->getFecha()->getAno() << ")" << ": "; cin >> ano;
+				}
 			}
 
 			fecha = new Fecha(dia, mes, ano);
 			contactos->modificarContacto(pos, nombre, facultad, email, redSocial,
 				telefono, fecha, sexo);
 
-			cout << "Los cambios al contacto" << "\"" << contacto->getNombre() << "\"" << " fueron realizados";
+			cout << "Los cambios al contacto " << "\"" << contacto->getNombre() << "\"" << " fueron realizados";
 		}
 		return;
 	}

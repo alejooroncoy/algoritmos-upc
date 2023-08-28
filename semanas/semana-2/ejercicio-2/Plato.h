@@ -21,6 +21,7 @@ public:
 	char getTipo();
 	float getPrecio();
 	float getCalorias();
+	string toString();
 	
 	void setNombre(string nombre);
 	void setEstado(short estado);

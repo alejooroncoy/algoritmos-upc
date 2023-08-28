@@ -71,3 +71,13 @@ void Plato::setCalorias(float calorias)
 {
 	this->calorias = calorias;
 }
+
+string Plato::toString() {
+	string resultado = "";
+	resultado += this->nombre + "\t ";
+	resultado += to_string(this->estado) + "\t ";
+	resultado += string(1, this->tipo) + "\t ";
+	resultado += to_string(this->calorias) + "\t ";
+	resultado += to_string(this->precio) + "\t ";
+	return resultado;
+}
